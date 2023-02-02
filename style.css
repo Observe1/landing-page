@@ -1,12 +1,14 @@
+@import url('https://fonts.cdnfonts.com/css/hero-new');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-/* body { */
-    
-/* } */
+body {
+   /* font-family: 'Hero New';  */
+}
 
 .container {
     max-width: 1100px;
@@ -15,6 +17,10 @@
 }
 
 /* Navbar */
+
+.sound {
+    
+}
 
 .navbar {
     background: #1f2937;
@@ -53,7 +59,7 @@
 .header {
     padding: 60px 0;
     background: #1f2937;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .header .container {
@@ -94,9 +100,17 @@ img {
 
 /* Boxes */
 
-.boxes {
+.boxes h2 {
     display: flex;
+    justify-content: center;
+    color: #e5e7eb;
+    margin: 20px;
+}
 
+.boxes .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box {
@@ -123,8 +137,22 @@ img {
     
 }
 
+.hero .quote {
+    display: flex;
+    justify-content: end;
+}
+
 /* Call to action */
 
+.call .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    border: 2px solid red;
+    padding: 20px 60px;
+    margin: 20px 0;
+}
 
 /* Footer */
 
@@ -134,5 +162,9 @@ img {
     justify-content: center;
     align-items: center;
     background: #1f2937;
-    color:#e5e7eb
+}
+
+.footer a {
+    color: #e5e7eb;
+    text-decoration: none;
 }
