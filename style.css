@@ -1,5 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/hero-new');
 @import url('https://fonts.cdnfonts.com/css/hero-2');
+@import url('https://fonts.cdnfonts.com/css/kawashiro-gothic');
 
 * {
     box-sizing: border-box;
@@ -7,10 +8,9 @@
     margin: 0;
 }
 
-body {
-   /* font-family: 'Hero New';  */
+/* body {
    min-height: 100vh;
-}
+} */
 
 /* .container {
     max-width: 1100px;
@@ -56,111 +56,152 @@ body {
 /* Header */
 
 .header {
-    padding: 60px 0;
-    /* background: linear-gradient( to right, #0f2027, #203a43, #2c5364 ); */
-    background-color: rgba(0, 0, 0, 0.7);
-    opacity: 0.9;
-    /* border: 3px solid red; debug */ 
+    position: relative;
+}
+
+.headerContainer {
+    width: 85%;
     height: 100%;
-    width: 65%;
-    border-radius: 10px;
+    border-radius: 1.5rem;
     margin: 9em auto 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 2em rgb(69 69 69);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 2rem rgb(69, 69, 69);
 }
 
-.header .container {
+.headerLeft {
+    color: white;
+    margin: 3rem 2rem 3rem 5rem;
+    width: 40vw;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+}
+
+.greetings {
+    font-size: 2.2rem;
+    text-shadow: 0 0 0.8rem rgb(255, 255, 255);
+    text-align: center;
+    font-family: "hero-2";
+}
+
+.description {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    text-align: justify;
+}
+
+.moreContainer {
+    margin-top: 3rem;
+}
+
+.more {
+    color: wheat;
+    border: 0.2rem solid white;
+    border-radius: 2em;
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
-}
-
-.header .container div {
-    max-width: 50%;
-    padding: 0 50px;
-}
-
-.header h1 {
-    color: #f9faf8;
-    font-size: 48px;
-    font-weight: bolder;
-    line-height: 1;
-}
-
-.header p {
-    font-size: 18px;
-    color: #e5e7eb;
-}
-
-.header button {
-    background-color: #3882f6;
-    /* color: #e5e7eb; */
-    padding: 3px 15px;
-    border-radius: 4px;
-    margin-top: 10px;
-    border: 0;
-}
-
-.header a {
+    font-size: 1.2rem;
     text-decoration: none;
-    color: #e5e7eb;
+    background-image: linear-gradient( to right, #000000, #16222a, 0.5 );
+    transition: 0.3s;
+    font-family: "hero-2";
 }
 
-/* .header img {
-    height: 250px;
-    width: 500px;
-} */
+.more:hover {
+    transform: translateX(-3%);
+    background-image: linear-gradient( to right, #000000, #16222a, 0.7 );
+    box-shadow: 0 0 0.6rem white;
+}
 
-.header video {
-    height: 400px;
-    width: 800px;
+.headerRight {
+    width: 50vw;
+    margin: 3em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerImage {
+    width: 35vw;
+}
+
+.headerCaption {
+    color: white;
+    margin-top: 0.5em;
+    font-size: 1.1rem;
 }
 
 /* Boxes */
 
-.boxes .container {
-    min-height: 40vh;
-    min-width: 30vh;
+.boxesBg {
+    background-image: linear-gradient( to right, #000000, #16222a );
+    margin-top: 18rem;
+}
+
+.boxesContent {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.boxesHeading {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    margin: 0.5rem 1rem 1.5rem 1rem;
+    font-family: "hero-2";
+}
+
+.boxesInfo {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    margin: 0 2.5rem;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    /* flex-wrap: wrap; */
+    flex: 1 1 0px;
 }
 
-.boxes h2 {
-    display: flex;
-    justify-content: center;
-    color: #f9faf8;
-    margin: 30px;
-    font-family: 'Hero-2';
+.art {
+    width: 30rem;
+    height: 18rem;
+    object-fit: cover;
+    border: 0.3rem solid white;
+    border-radius: 1.5rem;
+    box-shadow: 0 10 px 30px black;
+    transition: 0.3s;
+    /* margin: -0.5rem -1rem -1rem -1rem; */
 }
 
-.boxes .box a {
-    border: 3px solid #e5e7eb;
-    border-radius: 5px;
-    height: 255px;
-    width: 450px;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 0 2em rgb(69 69 69);
+.art:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgb(2, 173, 164);
 }
 
-.boxes img {
-    display: flex;
-    justify-content: space-between;
-    height: 250px;
-    width: 500px;
+.link {
+    margin: 1rem 2rem 0 2 rem;
+    border-radius: 1.5rem;
 }
 
-.box img {
-    display: flex;
-    justify-content: space-between;
+.boxText {
+    text-align: center;
+    color: white;
+    font-size: 1.7rem;
+    margin: 1rem 0 1 rem 0;
+    font-family: "hero-2";
+    z-index: 2;
 }
 
 /* Quote */
@@ -239,4 +280,27 @@ body {
 
 .footer img {
     height: 15px;
+}
+
+@media (max-width: 1100px) {
+    .headerContainer {
+        flex-direction: column;
+    }
+
+    .headerLeft {
+        margin: 4rem auto 0 auto;
+        width: 65vw;
+    }
+
+    .headerRight {
+        margin-top: 4rem;
+    }
+
+    .headerImage {
+        width: 60vw;
+    }
+
+    .headerCaption {
+        font-size: 2vw;
+    }
 }
